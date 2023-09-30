@@ -6,7 +6,34 @@ This script automatically fetches missing tracks and albums from your Lidarr set
 
 - A working installation of [Lidarr](https://lidarr.audio/).
 - A Spotify developer account to create API access.
-- [d-fi](https://notabug.org/sayem314/d-fi) set up and ready for downloading tracks from Spotify.
+- [d-fi](https://notabug.org/sayem314/d-fi) set up and ready for downloading tracks from Spotify. As part of the d-fi config.json file, you will need an [ARR token](https://rentry.org/firehawk52#deezer-arls) for downloading from the server
+
+An example config.json file to be place beside the `d-fi.exe` can look something like this:
+```
+{
+  "concurrency": 4,
+  "saveLayout": {
+    "track": "YOURPLEXMUSICPATH/{ALB_TITLE}/{SNG_TITLE}",
+    "album": "YOURPLEXMUSICPATH/{ALB_TITLE}/{SNG_TITLE}",
+    "artist": "YOURPLEXMUSICPATH/{ALB_TITLE}/{SNG_TITLE}",
+    "playlist": "YOURPLEXMUSICPATH/{TITLE}/{SNG_TITLE}"
+  },
+  "playlist": {
+    "resolveFullPath": false
+  },
+  "trackNumber": true,
+  "fallbackTrack": true,
+  "fallbackQuality": true,
+  "coverSize": {
+    "128": 500,
+    "320": 500,
+    "flac": 1000
+  },
+  "cookies": {
+    "arl": "ARLKEYGOESHERE"
+  }
+}
+```
 
 ## Setup Instructions
 
