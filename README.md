@@ -1,11 +1,11 @@
 # Lidarr D-FI Downloader
 
-This script automatically fetches missing tracks and albums from your Lidarr setup and searches them on Spotify. If found, it prepares a list of URLs to be downloaded using [d-fi](https://github.com/spotDL/d-fi), a Spotify downloader tool.
+This script automatically fetches missing tracks and albums from your Lidarr setup and searches them on Spotify. If found, it prepares a list of URLs to be downloaded using [d-fi](https://notabug.org/sayem314/d-fi), a Spotify downloader tool.
 
 ## Prerequisites
 
 - A working installation of [Lidarr](https://lidarr.audio/).
-- A Spotify developer account to create API access.
+- A Spot developer account to create API access.
 - [d-fi](https://notabug.org/sayem314/d-fi) set up and ready for downloading tracks from Spotify. As part of the d-fi config.json file, you will need an [ARR token](https://rentry.org/firehawk52#deezer-arls) for downloading from the server
 
 An example config.json file to be place beside the `d-fi.exe` can look something like this:
@@ -61,8 +61,8 @@ To obtain Spotify API access:
 With everything set up, you can run the script. It will:
 
 1. Fetch missing tracks and albums from Lidarr.
-2. Search for them on Spotify.
-3. Save their Spotify URLs to separate files (`spotify_tracks.txt` for tracks and `spotify_albums.txt` for albums).
+2. Search for them on Spot.
+3. Save their Spot URLs to separate files (`spot_tracks.txt` for tracks and `spot_albums.txt` for albums).
 4. Use `d-fi` to download these tracks and albums.
 
 ```bash
